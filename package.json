@@ -1,7 +1,7 @@
 {
   "name": "parcel-demo",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a demo project for introducing parcel to beginners",
   "main": "index.js",
   "scripts": {
     "start": "parcel src/index.html",
@@ -16,6 +16,7 @@
     "purecss": "^1.0.0"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.3"
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.18.0"
   }
 }
