@@ -11,7 +11,7 @@ npm install
 ### Compiles and hot-reloads for development
 
 ```bash
-npm run dev
+npm start
 ```
 
 ### Compiles and minifies for production
