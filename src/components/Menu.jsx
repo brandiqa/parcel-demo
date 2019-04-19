@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Menu() {
   return (
@@ -7,20 +8,20 @@ export default function Menu() {
         DEMO
       </a>
       <ul className="pure-menu-list">
-        <li className="pure-menu-item pure-menu-selected">
-          <a href="#" className="pure-menu-link">
+        <li className="pure-menu-item">
+          <Link to="/" className="pure-menu-link">
             Jokes
-          </a>
+          </Link>
         </li>
         <li className="pure-menu-item">
-          <a href="#" className="pure-menu-link">
+          <Link to="/advice" className="pure-menu-link">
             Advice
-          </a>
+          </Link>
         </li>
         <li className="pure-menu-item">
-          <a href="#" className="pure-menu-link">
+          <Link to="/about" className="pure-menu-link">
             About
-          </a>
+          </Link>
         </li>
       </ul>
     </div>

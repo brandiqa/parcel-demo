@@ -12,7 +12,7 @@ export default function Jokes() {
       })
     });
     const body = await resp.json();
-    if (didCancel) return;
+    if (didCancel) return; // Don't update if component has unmounted
     setJoke(body.joke);
   };
 
