@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 export default function Jokes() {
   const [joke, setJoke] = useState("Joke is loading....");
+  let didCancel = false;
 
   const fetchJoke = async () => {
     const resp = await fetch("https://icanhazdadjoke.com/", {
@@ -11,11 +12,18 @@ export default function Jokes() {
       })
     });
     const body = await resp.json();
+    if (didCancel) return;
     setJoke(body.joke);
   };
 
   useEffect(() => {
+    didCancel = false;
+
     fetchJoke();
+
+    return () => {
+      didCancel = true;
+    };
   }, []);
 
   return (
