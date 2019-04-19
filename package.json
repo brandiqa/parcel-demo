@@ -13,9 +13,13 @@
   "author": "Michael Wanyoike",
   "license": "MIT",
   "dependencies": {
-    "purecss": "^1.0.0"
+    "purecss": "^1.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "parcel-bundler": "^1.12.3",
     "sass": "^1.18.0"
   },
