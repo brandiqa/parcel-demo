@@ -6,7 +6,7 @@ export default function About() {
     <div className="pure-g">
       <div className="pure-u-1-1">
         <h1>About Page</h1>
-        <img class="pure-img" src={img} width="600px" />
+        <img className="pure-img" src={img} width="600px" />
         <p>
           We chose a powder-coated aluminum housing for these headphones because
           the added mass means smoother transitions from the lowest frequency
