@@ -1,23 +1,47 @@
-.container {
-  padding-right: 15px;
-  padding-left: 15px;
+$screen-sm-min: 768px !default;
+$screen-md-min: 992px !default;
+$screen-lg-min: 1200px !default;
+$grid-gutter-width: 30px !default;
+$container-sm: (720px + $grid-gutter-width) !default;
+$container-md: (940px + $grid-gutter-width) !default;
+$container-lg: (1140px + $grid-gutter-width) !default;
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    display: table; // 2
+    content: " "; // 1
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin container-fixed($gutter: $grid-gutter-width) {
+  padding-right: ceil(($gutter / 2));
+  padding-left: floor(($gutter / 2));
   margin-right: auto;
   margin-left: auto;
+  @include clearfix;
 }
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
+
+.container {
+  @include container-fixed;
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
   }
 }
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
+
+h2 {
+  color: #474747;
+  font-style: italic;
 }
 
 .pure-button {
